@@ -36,9 +36,6 @@ function insert(data){
     }
 }
 
-function a(){
-
-}
 
 
 

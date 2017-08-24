@@ -8,6 +8,7 @@ function Node(data,left,right){
     this.left = left;
     this.right = right;
     this.show = show;
+
 }
 
 
@@ -20,6 +21,8 @@ function BST(){
     this.root = null;
     this.insert = insert;
     this.inOrder = inOrder;
+    this.getMin = getMin;
+    this.getMax = getMax;
 }
 
 function insert(data){
@@ -57,6 +60,30 @@ function inOrder(node){
     }
 }
 
+//先序遍历
+function preOrder(node){
+    if(!(node == null)){
+        console.log(node.show() + " ");
+        preOrder(node.left);
+        preOrder(node.right);
+    }
+}
+
+function getMin(){
+    var current = this.root;
+    while(!(current.left == null)){
+        current = current.left;
+    }
+    return current.data;
+}
+
+function getMax(){
+    var current = this.root;
+    while(!(current.right == null)){
+        current = current.right;
+    }
+    return current.data;
+}
 var nums = new BST();
 nums.insert(23)
 nums.insert(45)
@@ -65,13 +92,14 @@ nums.insert(37)
 nums.insert(3)
 nums.insert(99)
 nums.insert(22)
-console.log("Ionder traversal: ")
+/*console.log("Ionder traversal: ")
 inOrder(nums.root)
+console.log("----------------")
+preOrder(nums.root)*/
 
-
-
-
-
+console.log("----------------")
+console.log(nums.getMin())
+console.log(nums.getMax())
 
 
 

@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2017/8/24 0024.
+ * Created by Administrator on 2017/8/25 0024.
  */
 
 function Vertxt(label){
